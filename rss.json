@@ -1,0 +1,2365 @@
+{
+  "name": "RSS",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Form Intake Trigger\n**Form intake** is the trigger form by n8n that asks for initial data and works on top of that.",
+        "height": 128,
+        "width": 272,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -432,
+        1056
+      ],
+      "id": "f8a75760-3f11-407c-b08e-b0d223ecd1dc",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "14401c92-6f16-484e-af1d-7cb438b1739d",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "95774b4a-922f-4f81-b83b-99ea39cd36bd",
+      "name": "Sort"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        384
+      ],
+      "id": "c996b173-9778-45ad-8294-68d217ac9359",
+      "name": "Sort1"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        384
+      ],
+      "id": "2640e773-284c-4511-8fb5-325a48ed9317",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        672,
+        896
+      ],
+      "id": "8092621a-751c-409e-adf8-51f877eaf905",
+      "name": "Merge"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        1280
+      ],
+      "id": "0117404f-8675-42ed-bb61-1ac3072af5d4",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "url": "https://techcrunch.com/category/enterprise/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "3c09bc6a-9ee0-43f2-b790-1a284f047223",
+      "name": "TechCrunch"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        192
+      ],
+      "id": "b35645a9-66d3-4349-8aa8-225231686dda",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        192
+      ],
+      "id": "b33c82ce-01d2-4350-8c31-77180276b7fa",
+      "name": "Sort2"
+    },
+    {
+      "parameters": {
+        "url": "https://blocksandfiles.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        192
+      ],
+      "id": "2a06ef0f-7e31-43eb-b5e2-f43e0ef33b72",
+      "name": "Blocks&Files"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        576
+      ],
+      "id": "ca064562-b756-4642-965c-cb8abf6786d4",
+      "name": "Sort3"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        576
+      ],
+      "id": "10342f0f-914d-4831-9ea7-ef3f042905d8",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "url": "https://www.theregister.com/headlines.atom",
+        "options": {
+          "customFields": ""
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        576
+      ],
+      "id": "e90bfe49-2cb2-47d9-a5a5-843bd7222866",
+      "name": "The Register"
+    },
+    {
+      "parameters": {
+        "url": "https://www.storagereview.com/feed",
+        "options": {
+          "customFields": ""
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        384
+      ],
+      "id": "1868bf9e-4d9d-4fe3-ad34-22fab624f713",
+      "name": "Storage Review"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        768
+      ],
+      "id": "4f946191-397c-4178-88f3-434d3fb8e33f",
+      "name": "Sort4"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        768
+      ],
+      "id": "53892d23-d22d-4f4f-94d7-a5fee77e4347",
+      "name": "Code4"
+    },
+    {
+      "parameters": {
+        "url": "https://www.zdnet.com/news/rss.xml",
+        "options": {
+          "customFields": ""
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        768
+      ],
+      "id": "4cbafd1b-0d1c-448a-ba36-f42763f61b46",
+      "name": "ZDNet"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        960
+      ],
+      "id": "789cdd70-15cd-449e-b007-b0851e7f3165",
+      "name": "Sort5"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        960
+      ],
+      "id": "981c0dc1-bf89-4edf-8948-19f9b89cd109",
+      "name": "Code5"
+    },
+    {
+      "parameters": {
+        "url": "https://www.datacenterknowledge.com/rss.xml",
+        "options": {
+          "customFields": ""
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        960
+      ],
+      "id": "a7792eed-4686-4a17-9ff2-e68a279815a5",
+      "name": "Data Center"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        1152
+      ],
+      "id": "a5d5d6d8-03f7-4ee2-adb1-ba3247706e6b",
+      "name": "Sort6"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        1152
+      ],
+      "id": "beea82b3-f490-48d0-884f-71fc89e9d598",
+      "name": "Code6"
+    },
+    {
+      "parameters": {
+        "url": "https://www.enterprisestorageforum.com/feed/",
+        "options": {
+          "customFields": ""
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1152
+      ],
+      "id": "a1d384c8-5f35-4303-ad8b-306446b1719c",
+      "name": "Enterprise storage forum"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        1344
+      ],
+      "id": "da3dfdbb-5ecb-4990-8d60-62ff2525b4a1",
+      "name": "Sort7"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        1344
+      ],
+      "id": "f652f205-df96-433e-909d-d30017bd6bee",
+      "name": "Code7"
+    },
+    {
+      "parameters": {
+        "url": "https://feed.infoq.com/",
+        "options": {
+          "customFields": ""
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1344
+      ],
+      "id": "69bbfa6c-79ea-44d8-92a7-883c3fc37d04",
+      "name": "InfoQ"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        1536
+      ],
+      "id": "52a468a7-54e0-4569-b3d5-c0113857ba4d",
+      "name": "Sort8"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        1536
+      ],
+      "id": "1c77ac07-cfd9-40ee-8a2f-1d8c332d0027",
+      "name": "Code8"
+    },
+    {
+      "parameters": {
+        "url": "https://www.datacenterpost.com/feed",
+        "options": {
+          "customFields": ""
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1536
+      ],
+      "id": "ed47e4bf-7d28-4a4a-aa6e-c632139f2ef7",
+      "name": "Data Center Post"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "isoDate",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        224,
+        1728
+      ],
+      "id": "3d49e58b-a87b-4824-8d0b-be4e7c614b68",
+      "name": "Sort9"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        1728
+      ],
+      "id": "0fe3297e-f3c9-48dc-9a6c-2f93073f364f",
+      "name": "Code9"
+    },
+    {
+      "parameters": {
+        "url": "https://www.expresscomputer.in/feed",
+        "options": {
+          "customFields": ""
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1728
+      ],
+      "id": "7eccee67-7ebd-477e-8ce4-d58978460e62",
+      "name": "Frontier",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Subject for Research: {{ $('Form intake').item.json['Subject for Research'] }}\n\nTopic on which we will write a post later on(Make the summary relevant to this theme): {{ $('Form intake').item.json['Topic on which the post should be'] }}\n\nArticle: {{ $json.cleaned_text }}\n\nSummarize the above article based on the research subject.\n\nKeep it under 120 words. \nReturn JSON exactly like this without any \"output\" field:\n{\n  \"title\": \"\",\n  \"summary\": \"\",\n  \"keywords\": []\n}\n",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=Summarize the following article based on the research subject: “{{ $('Form intake').item.json['Subject for Research'] }}”.\n\nKeep it under 120 words. \nReturn JSON exactly like this without any \"output\" field:\n{\n  \"title\": \"\",\n  \"summary\": \"\",\n  \"keywords\": []\n}\n"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        2144,
+        1280
+      ],
+      "id": "6d897616-3881-4a48-be62-8462a88f939f",
+      "name": "Summary Generator"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Summary:  {{ $json.text }}\n\nFrom this summary, extract the single biggest painful problem enterprise customers face.\n\nReturn JSON:\n{\n  \"pain\": \"\",\n  \"severity\": 1-10,\n  \"why_it_matters\": \"\"\n}\n",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=From this summary, extract the single biggest painful problem enterprise customers face.  \n\nReturn JSON: {   \"pain\": \"\",   \"severity\": 1-10,   \"why_it_matters\": \"\" }"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        2496,
+        1280
+      ],
+      "id": "d8f9a2ae-2c16-486a-9c41-ee27a95bbbe3",
+      "name": "Painful Issue Generator"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano-2025-08-07",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano-2025-08-07"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        2576,
+        1504
+      ],
+      "id": "873b8af4-83bf-4a44-9dac-6a51169de052",
+      "name": "Brain-Issue",
+      "credentials": {
+        "openAiApi": {
+          "id": "2z7GAZbOCnssnwkg",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano-2025-08-07",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano-2025-08-07"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        2224,
+        1504
+      ],
+      "id": "9e5f8609-6599-4413-824e-0444b60b005c",
+      "name": "Brain-Summary",
+      "credentials": {
+        "openAiApi": {
+          "id": "2z7GAZbOCnssnwkg",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    summary: $('Summary Generator').first().json.text,   // full JSON from first AI\n    pain: $('Painful Issue Generator').first().json.text // full JSON from second AI\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2848,
+        1408
+      ],
+      "id": "1a5345b8-4faf-4e55-b62b-00c85c436a31",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-nano-2025-08-07",
+          "mode": "list",
+          "cachedResultName": "gpt-5-nano-2025-08-07"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        1760,
+        800
+      ],
+      "id": "8b7727f5-ece5-4f4f-afd9-885c7974f5e7",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "2z7GAZbOCnssnwkg",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://stablehorde.net/api/v2/generate/async",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"prompt\": \"Create a LinkedIn carousel slide with this text:\\n\\nSlide text: \\\"{{ $json.slideOutlines[1] }}\\\"\\nConcept: \\\"{{ $json.conceptTitle }}\\\"\\nTheme: \\\"{{ $json.hooks[1] }}\\\"\\n\\nStyle: clean, enterprise, modern.\",\n  \"params\": {\n    \"sampler_name\": \"k_euler_a\",\n    \"width\": 512,\n    \"height\": 512,\n    \"steps\": 20\n  },\n  \"nsfw\": false\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        2560,
+        400
+      ],
+      "id": "8b42bf3c-b22f-4f15-9c37-44282acdb550",
+      "name": "HTTP Request4",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "=https://stablehorde.net/api/v2/generate/status/{{$json.id}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3072,
+        400
+      ],
+      "id": "4c0d2fca-c86e-4ddd-85ab-d47159b48375",
+      "name": "HTTP Request5",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.generations[0].img }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3296,
+        400
+      ],
+      "id": "fc4d22ab-317f-4f9d-97c7-f25bab891e11",
+      "name": "HTTP Request6",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://stablehorde.net/api/v2/generate/async",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"prompt\": \"Create a LinkedIn carousel slide with this text:\\n\\nSlide text: \\\"{{ $json.slideOutlines[2] }}\\\"\\nConcept: \\\"{{ $json.conceptTitle }}\\\"\\nTheme: \\\"{{ $json.hooks[2] }}\\\"\\n\\nStyle: clean, enterprise, modern.\",\n  \"params\": {\n    \"sampler_name\": \"k_euler_a\",\n    \"width\": 512,\n    \"height\": 512,\n    \"steps\": 20\n  },\n  \"nsfw\": false\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        2560,
+        592
+      ],
+      "id": "76fe1b8b-85eb-4395-86a9-2a429004379a",
+      "name": "HTTP Request7",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "=https://stablehorde.net/api/v2/generate/status/{{$json.id}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3072,
+        592
+      ],
+      "id": "9bf3578f-68d8-49b3-bc18-787a1d0e11a4",
+      "name": "HTTP Request8",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.generations[0].img }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3296,
+        592
+      ],
+      "id": "49bc1b52-35ab-4a50-86c5-14846ce340b0",
+      "name": "HTTP Request9",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "amount": 90
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2848,
+        400
+      ],
+      "id": "8129490a-6894-4540-b31f-a39189fab5b9",
+      "name": "Wait",
+      "webhookId": "4b19406a-fdfe-4ca8-8105-413ecac50e38",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "amount": 120
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2848,
+        208
+      ],
+      "id": "4cc939aa-9d8a-4018-aa9c-c515a75825e8",
+      "name": "Wait1",
+      "webhookId": "b951f7a5-7e1b-470d-8ac0-92ea9549eebd"
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2848,
+        592
+      ],
+      "id": "87f768aa-3800-4718-a22f-d30427c8ac2f",
+      "name": "Wait2",
+      "webhookId": "7adcc68b-d4dc-4947-b96f-9d69d077d6ec",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://stablehorde.net/api/v2/generate/async",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"prompt\": \"Create a LinkedIn carousel slide with this text:\\n\\nSlide text: \\\"{{ $json.slideOutlines[3] }}\\\"\\nConcept: \\\"{{ $json.conceptTitle }}\\\"\\nTheme: \\\"{{ $json.hooks[3] }}\\\"\\n\\nStyle: clean, enterprise, modern.\",\n  \"params\": {\n    \"sampler_name\": \"k_euler_a\",\n    \"width\": 512,\n    \"height\": 512,\n    \"steps\": 20\n  },\n  \"nsfw\": false\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        2560,
+        784
+      ],
+      "id": "0d2581bc-8aba-4bd4-9350-6a3cf14082e6",
+      "name": "HTTP Request10",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "=https://stablehorde.net/api/v2/generate/status/{{$json.id}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3072,
+        784
+      ],
+      "id": "26183d6a-4218-4a52-b2f4-c9d27423aee4",
+      "name": "HTTP Request11",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.generations[0].img }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3296,
+        784
+      ],
+      "id": "00a0a2d7-0019-493d-bca4-c24da9a8483d",
+      "name": "HTTP Request12",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://stablehorde.net/api/v2/generate/async",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"prompt\": \"Create a LinkedIn carousel slide with this text:\\n\\nSlide text: \\\"{{ $json.slideOutlines[4] }}\\\"\\nConcept: \\\"{{ $json.conceptTitle }}\\\"\\nTheme: \\\"{{ $json.hooks[4] }}\\\"\\n\\nStyle: clean, enterprise, modern.\",\n  \"params\": {\n    \"sampler_name\": \"k_euler_a\",\n    \"width\": 512,\n    \"height\": 512,\n    \"steps\": 20\n  },\n  \"nsfw\": false\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        2560,
+        976
+      ],
+      "id": "7266a571-1169-4bee-b191-81e98ec798e4",
+      "name": "HTTP Request13",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "=https://stablehorde.net/api/v2/generate/status/{{$json.id}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3072,
+        976
+      ],
+      "id": "ae3701fe-7cc3-47fc-bf84-712455616c9d",
+      "name": "HTTP Request14",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.generations[0].img }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3296,
+        976
+      ],
+      "id": "065e906d-2c33-493c-8cd9-5123a3184a32",
+      "name": "HTTP Request15",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2848,
+        784
+      ],
+      "id": "1856153e-786d-4cad-88b3-97183d32fcb1",
+      "name": "Wait3",
+      "webhookId": "4b19406a-fdfe-4ca8-8105-413ecac50e38",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2848,
+        976
+      ],
+      "id": "bbd070c8-b000-4eff-8d96-51349f339b25",
+      "name": "Wait4",
+      "webhookId": "7adcc68b-d4dc-4947-b96f-9d69d077d6ec",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## RSS Read, Sort, and 10 items \n**RSS Read** node gathers the RSS feed from the link provided. It gets all the feed, we then need to sort out what we actually need.\n\n**Sort** node sorts the RSS feed based on the most recent feeds. \n\n**Code node** node is written with code that just outputs 10 items per feed.",
+        "height": 240,
+        "width": 432,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        64,
+        -304
+      ],
+      "id": "2aa7bc47-8538-4162-8f5d-3f4c1a40199a",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## Merge & Loopback Period\n**Merge** node merges all the 10-10-10 results from each feed and makes them 100 news articles.\n\n**Loopback Period** node sorts the RSS feed based on the loopback period that will be mentioned in the forms. \n",
+        "height": 176,
+        "width": 384,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        672,
+        608
+      ],
+      "id": "cf680512-71e9-4396-9415-bfe1f8314568",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "## 10 items & Loop\n**10 items** node takes only 10 items from all the provided results. These will be based from the previous node where every item will again be sorted based on most recent feed.\n\n**Loop** node iterates over every article into getting more information from them",
+        "height": 192,
+        "width": 384,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1072,
+        800
+      ],
+      "id": "f9197d67-3222-4540-8d9f-d20c66ad2c63",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "jsCode": "const lookback = $('Form intake').first().json['Loopback period']\nconst cutoff = new Date(Date.now() - lookback * 24 * 60 * 60 * 1000);\n\nreturn items.filter(item => {\n  const pub = new Date(item.json.isoDate || item.json.pubDate);\n  return pub >= cutoff;\n});\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        896,
+        1024
+      ],
+      "id": "e27ce32b-a3bb-4cc1-b529-32d066141fc8",
+      "name": "Loopback period"
+    },
+    {
+      "parameters": {
+        "formTitle": "Crowd Wisdom",
+        "formDescription": "Intern position assessment",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Subject for Research",
+              "placeholder": "enterprise storage news"
+            },
+            {
+              "fieldLabel": "Loopback period",
+              "fieldType": "number",
+              "placeholder": "how many days back to search"
+            },
+            {
+              "fieldLabel": "Topic on which the post should be",
+              "placeholder": "storage efficiency"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -448,
+        1280
+      ],
+      "id": "c781985c-fbcb-455b-bc27-b3a6c93ed95c",
+      "name": "Form intake",
+      "webhookId": "8d1eeee0-11eb-4968-b354-d4c07ebae402"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.slice(0, 10);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        1024
+      ],
+      "id": "9e4e3543-ead8-44b4-91c1-6b8b8a36331b",
+      "name": "10 items"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1344,
+        1024
+      ],
+      "id": "760aca63-6818-47e7-a7ba-96fe152190ee",
+      "name": "Loop"
+    },
+    {
+      "parameters": {
+        "content": "## HTML full article & Get Data from HTML\n**HTML full article** node gets the whole HTML page of the article link provided from the rss feed. It contains all html tags and stuff.\n\n**Get Data from HTML** node cleans all the HTML tags and all other notations and gives out clear and refined data",
+        "height": 224,
+        "width": 384
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1568,
+        1024
+      ],
+      "id": "b0c95326-97d5-46bc-bfcc-48c4cba1f1a8",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Detect HTML in multiple possible fields\nconst html = $json.data \n\n// If not a string, return empty clean text\nif (typeof html !== \"string\") {\n  return {\n    cleaned_text: \"\"\n  };\n}\n\n// remove script & style blocks completely\nlet text = html\n  .replace(/<script[\\s\\S]*?<\\/script>/gi, '')\n  .replace(/<style[\\s\\S]*?<\\/style>/gi, '');\n\n// remove HTML comments\ntext = text.replace(/<!--[\\s\\S]*?-->/g, '');\n\n// remove all HTML tags\ntext = text.replace(/<\\/?[^>]+(>|$)/g, ' ');\n\n// collapse whitespace\ntext = text.replace(/\\s+/g, ' ').trim();\n\n// Return a **single object**, NOT an array\nreturn {\n  cleaned_text: text\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1856,
+        1280
+      ],
+      "id": "7ed4043b-47c0-4e6d-a7a5-8c29c2abbfc6",
+      "name": "Get Data from HTML"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.link }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1568,
+        1280
+      ],
+      "id": "02a3caff-9c02-4ac5-8645-ee5c817a09ea",
+      "name": "HTML full article"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1a5PBlFkm9Ila3AH31Gn5wzXzVxJI2axuSfepdRvJWXE",
+          "mode": "list",
+          "cachedResultName": "Logging - RSS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1a5PBlFkm9Ila3AH31Gn5wzXzVxJI2axuSfepdRvJWXE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1a5PBlFkm9Ila3AH31Gn5wzXzVxJI2axuSfepdRvJWXE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Title": "={{ $('JSON Parser').item.json.conceptTitle }}",
+            "outline": "={{ $('JSON Parser').item.json.slideOutlines[0] }}",
+            "icp title": "={{ $('JSON Parser').item.json.icp.title }}",
+            "hooks": "={{ $('JSON Parser').item.json.hooks[0] }}",
+            "cta": "={{ $('JSON Parser').item.json.cta }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "outline",
+              "displayName": "outline",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "icp title",
+              "displayName": "icp title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "hooks",
+              "displayName": "hooks",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "cta",
+              "displayName": "cta",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        3840,
+        592
+      ],
+      "id": "63db61e5-c614-4003-957b-c446bddb00d6",
+      "name": "Logging",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "l2lG70lK0RDdmzay",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Summary Generator & Painful Issue Generator\n**Summary Generator** node gives all the clean data extracted from the link and generates a title, summary and some keywords.\n\n**Painful Issue Generator** node understand the summary and identifies the painful issues based on the subject and messaging context. It generates the pain point, it's severity and why it matters.",
+        "height": 240,
+        "width": 448,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2224,
+        1648
+      ],
+      "id": "36ecdd6a-31bc-41e0-89bb-ad0c72c29fb4",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Summary and pain points of different articles one by one:\n\nSummary 1: {{ $json.data[0].summary }}\nPain 1: {{ $json.data[0].pain }}\n\nSummary 2: {{ $json.data[1].summary }}\nPain 2: {{ $json.data[1].pain }}\n\nSummary 3: {{ $json.data[2].summary }}\nPain 3: {{ $json.data[2].pain }}\n\nSummary 4: {{ $json.data[3].summary }}\nPain 4: {{ $json.data[3].pain }}\n\nSummary 5: {{ $json.data[4].summary }}\nPain 5: {{ $json.data[4].pain }}\n\nSummary 6: {{ $json.data[5].summary }}\nPain 6: {{ $json.data[5].pain }}\n\nSummary 7: {{ $json.data[6].summary }}\nPain 7: {{ $json.data[6].pain }}\n\nSummary 8: {{ $json.data[7].summary }}\nPain 8: {{ $json.data[7].pain }}\n\nSummary 9: {{ $json.data[8].summary }}\nPain 9: {{ $json.data[8].pain }}\n\nSummary 10: {{ $json.data[9].summary }}\nPain 10: {{ $json.data[9].pain }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=Using:\n- All extracted pains\n- All summaries + keywords\n- Subject: “{{ $('Form intake').item.json['Subject for Research'] }}”\n- Messaging theme: “{{ $('Form intake').item.json['Topic on which the post should be'] }}”\n\nCreate a LinkedIn carousel concept with:\n1. conceptTitle\n2. 5 slideOutlines (1 sentence each)\n3. icp { title, industry, painPoint }\n4. 3 hooks\n5. a CTA\n\nPlease note that the hook line should grab the attention of the reader instantly to make them read the complete post.\nAlso the slide Outline should be engaging and trigger curiosity in every aspect and answer their all doubts.\nThe call to action shouldn't feel like a call to action but it should sub-consiously make them do the action.\nThe concept title is the main thing that everyone reads, so give most of your efforts there itself.\n\nReturn JSON only.\n"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        1840,
+        592
+      ],
+      "id": "7d0298e3-6596-4fac-9d57-d88abda0b135",
+      "name": "LinkedIn Post generator"
+    },
+    {
+      "parameters": {
+        "content": "## Aggregate, LinkedIn Post Generator & JSON Parser\n**Aggregate** node combines all the 10 results of summaries and pain points generated in the loop into 1 single list.\n\n**LinkedIn Post Generator** node uses OpenAI and generates all the content required to generate a linked in post, like title, slide outline, hooks, cta, etc.\n\n**JSON Parser** node helps in seperating all the context into it's individual components.",
+        "height": 272,
+        "width": 448,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1696,
+        272
+      ],
+      "id": "ff602e7a-f7d2-45ff-a5e9-cb7ca4dfaf6b",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: JSON.parse($input.first().json.text)\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2208,
+        592
+      ],
+      "id": "eb61b4df-4e9d-4052-bed9-8b24cc47a652",
+      "name": "JSON Parser"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1568,
+        592
+      ],
+      "id": "35065162-e957-481e-8b43-3ea6e4c46039",
+      "name": "Combine all 10 results"
+    },
+    {
+      "parameters": {
+        "postAs": "organization",
+        "organization": "107836297",
+        "text": "=\n{{ $('JSON Parser').item.json.hooks[2] }}\n\n{{ $('JSON Parser').item.json.slideOutlines[0] }}\n{{ $('JSON Parser').item.json.slideOutlines[1] }}\n{{ $('JSON Parser').item.json.slideOutlines[2] }}\n{{ $('JSON Parser').item.json.slideOutlines[3] }}\n{{ $('JSON Parser').item.json.slideOutlines[4] }}\n\n\n{{ $('JSON Parser').item.json.cta }}",
+        "shareMediaCategory": "IMAGE",
+        "additionalFields": {
+          "title": "={{ $('JSON Parser').item.json.conceptTitle }}"
+        }
+      },
+      "type": "n8n-nodes-base.linkedIn",
+      "typeVersion": 1,
+      "position": [
+        3632,
+        592
+      ],
+      "id": "5ef88e40-d2ab-4a6b-94a5-f498bb0e1553",
+      "name": "LinkedIn Post",
+      "credentials": {
+        "linkedInOAuth2Api": {
+          "id": "FXrKEMoPLmelKyhn",
+          "name": "LinkedIn account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://stablehorde.net/api/v2/generate/async",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"prompt\": \"Create a LinkedIn carousel slide with this text:\\n\\nSlide text: \\\"{{ $json.slideOutlines[0] }}\\\"\\nConcept: \\\"{{ $json.conceptTitle }}\\\"\\nTheme: \\\"{{ $json.hooks[0] }}\\\"\\n\\nStyle: clean, enterprise, modern.\",\n  \"params\": {\n    \"sampler_name\": \"k_euler_a\",\n    \"width\": 512,\n    \"height\": 512,\n    \"steps\": 20\n  },\n  \"nsfw\": false\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        2560,
+        208
+      ],
+      "id": "9a9e1470-6a7c-45a6-9da5-029ac7f42087",
+      "name": "Image ID Generation"
+    },
+    {
+      "parameters": {
+        "url": "=https://stablehorde.net/api/v2/generate/status/{{$json.id}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "0000000000"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3072,
+        208
+      ],
+      "id": "2c89a7b2-5127-436b-a84f-e590572561ef",
+      "name": "Image URL"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.generations[0].img }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        3296,
+        208
+      ],
+      "id": "77453164-dd2c-4e6d-b9b2-5364b5c267ef",
+      "name": "Image Generation"
+    },
+    {
+      "parameters": {
+        "content": "## Image Generation\n**Free Image Generator**.\n\nThis workflow uses free image generation which doesn't provide best image generation, we must replace this with a proper image generation tool. This is used just for demo purposes.",
+        "height": 192,
+        "width": 432,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2736,
+        -64
+      ],
+      "id": "becd70a1-2409-4f7a-9589-ed3b174cc26d",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "content": "## LinkedIn Posting & Logging\n**LinkedIn Post** node uses LinkedIn API to publish the post autonomously.\n\n**Logging** node logs every post generated and published for future reference. This is done as per mentioned for publication grade system.",
+        "height": 192,
+        "width": 432,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3600,
+        336
+      ],
+      "id": "c891604c-01c1-4a45-91be-f43dc489f11c",
+      "name": "Sticky Note8"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Loopback period",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "TechCrunch",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Blocks&Files",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Storage Review",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "The Register",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ZDNet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Data Center",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Enterprise storage forum",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "InfoQ",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Data Center Post",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Frontier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TechCrunch": {
+      "main": [
+        [
+          {
+            "node": "Sort",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Sort2": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Blocks&Files": {
+      "main": [
+        [
+          {
+            "node": "Sort2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort3": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "The Register": {
+      "main": [
+        [
+          {
+            "node": "Sort3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Storage Review": {
+      "main": [
+        [
+          {
+            "node": "Sort1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort4": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "ZDNet": {
+      "main": [
+        [
+          {
+            "node": "Sort4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort5": {
+      "main": [
+        [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "Data Center": {
+      "main": [
+        [
+          {
+            "node": "Sort5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort6": {
+      "main": [
+        [
+          {
+            "node": "Code6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "Enterprise storage forum": {
+      "main": [
+        [
+          {
+            "node": "Sort6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort7": {
+      "main": [
+        [
+          {
+            "node": "Code7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code7": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "InfoQ": {
+      "main": [
+        [
+          {
+            "node": "Sort7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort8": {
+      "main": [
+        [
+          {
+            "node": "Code8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code8": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "Data Center Post": {
+      "main": [
+        [
+          {
+            "node": "Sort8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort9": {
+      "main": [
+        [
+          {
+            "node": "Code9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code9": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "Frontier": {
+      "main": [
+        [
+          {
+            "node": "Sort9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summary Generator": {
+      "main": [
+        [
+          {
+            "node": "Painful Issue Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brain-Issue": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Painful Issue Generator",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brain-Summary": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Summary Generator",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Painful Issue Generator": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "LinkedIn Post generator",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request7": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request8": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request6": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request9": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Image URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request10": {
+      "main": [
+        [
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request11": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request13": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request14": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request12": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request15": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loopback period": {
+      "main": [
+        [
+          {
+            "node": "10 items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Form intake": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10 items": {
+      "main": [
+        [
+          {
+            "node": "Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop": {
+      "main": [
+        [
+          {
+            "node": "Combine all 10 results",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTML full article",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Data from HTML": {
+      "main": [
+        [
+          {
+            "node": "Summary Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML full article": {
+      "main": [
+        [
+          {
+            "node": "Get Data from HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn Post generator": {
+      "main": [
+        [
+          {
+            "node": "JSON Parser",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JSON Parser": {
+      "main": [
+        [
+          {
+            "node": "Image ID Generation",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request10",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine all 10 results": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn Post generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn Post": {
+      "main": [
+        [
+          {
+            "node": "Logging",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image ID Generation": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image URL": {
+      "main": [
+        [
+          {
+            "node": "Image Generation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Generation": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false,
+    "errorWorkflow": "8qMXvG9wqNlzZXAD"
+  },
+  "versionId": "b9bc2d30-8705-4487-a217-bab2cd82c9fe",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3e2347c9de171e3e16f5405d9831a41bf122ac669cdf66e6dfd8fba294a516a6"
+  },
+  "id": "Dd64sk8fmeNaC2TF",
+  "tags": []
+}
